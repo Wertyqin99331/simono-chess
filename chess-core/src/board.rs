@@ -88,9 +88,9 @@ pub type Bitboard = u64;
 pub struct Consts;
 
 impl Consts {
-    pub const PIECE_COUNT: u8 = 6;
-    pub const SIDE_COUNT: u8 = 2;
-    pub const CELLS_COUNT: u8 = 64;
+    pub const PIECE_COUNT: usize = 6;
+    pub const SIDE_COUNT: usize = 2;
+    pub const CELLS_COUNT: usize = 64;
 }
 
 pub struct Board {
@@ -101,6 +101,6 @@ pub struct Board {
 
 impl Board {
     pub fn get_pieces(&self, side: Side, piece: Piece) -> Bitboard {
-        self.pieces[side][piece]
+        self.pieces[side as usize][piece as usize]
     }
 }
