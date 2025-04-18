@@ -91,6 +91,7 @@ impl Consts {
     pub const PIECE_COUNT: usize = 6;
     pub const SIDE_COUNT: usize = 2;
     pub const CELLS_COUNT: usize = 64;
+    pub const CASTLING_PERMISSIONS: usize = 16;
 }
 
 pub struct Board {
